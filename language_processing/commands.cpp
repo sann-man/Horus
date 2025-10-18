@@ -8,6 +8,7 @@
 #include "../includes/commands.h"
 #include "../includes/main.h"
 #include "../includes/checklist.h"
+#include "../includes/dopamine.h"
 
 
 // input to output folow
@@ -32,6 +33,9 @@ void create(std::string type){
         // std::cout << "\nCreating checklist..."; // debug
         cl.create_checklist(); 
     }
+    if(type == "dopamine"){
+        action_input(); 
+    }       
 
 }
 
@@ -49,6 +53,7 @@ Parsed_Cmd check_for_command(std::string c){
     // if(sep != std::string::npos){std::cout << sep;}
     cmd = c.substr(0, sep); 
     type = c.substr(sep+1, last); 
+    
     // std::cout << "Mem size: " << len<< "\nCommand is: " << cmd << "\nType is: "<< type << "\n"; //debug 
 
     // check if input is command 
@@ -69,8 +74,6 @@ Parsed_Cmd check_for_command(std::string c){
     Parsed_Cmd p_cmd = {"none", "none"}; 
     return p_cmd; 
 }
-
-
 
 
 void command(std::string c){

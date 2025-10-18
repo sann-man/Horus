@@ -13,6 +13,7 @@ public:
     void create_checklist(); 
     void checklist_items(std::string, std::string); 
     void created_checklist_ui(std::string, std::vector<std::string>); 
+    void open_checklist(std::string);  // Needs a lot of work (moved on to new feature for now)
 };
 
 

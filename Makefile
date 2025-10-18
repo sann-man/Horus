@@ -1,6 +1,6 @@
 CXX = clang++ #compiler  
 CXXFLAGS = -I includes #compiler flags
-SOURCES = components/main.cpp language_processing/commands.cpp functionalities/checklist.cpp
+SOURCES = components/main.cpp language_processing/commands.cpp functionalities/checklist.cpp functionalities/dopamine.cpp functionalities/timer.cpp
 TARGET = build/program #output dir 
 
 $(TARGET): $(SOURCES) # build rule

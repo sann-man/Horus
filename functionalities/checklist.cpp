@@ -44,7 +44,6 @@ void Checklist::create_checklist(){
 // Create checlist operation flow 
 
 void Checklist::checklist_items(std::string type, std::string name){
-
     // creating a new checklist
     std::cout << type; 
     std::ifstream r("db/checklist.txt"); 
@@ -145,11 +144,10 @@ void Checklist::created_checklist_ui(std::string name, std::vector<std::string>)
     checklist_items(cl_types.created, name);     
 }
 
-// Create checkist
-
-
 // Open checklist
-
+void Checklist::open_checklist(std::string name){
+    std::ifstream fs("db/checklist.txt"); // opens the file
+}
 
 // Edit checklist
 
