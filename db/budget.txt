@@ -1,0 +1,5 @@
+Rent: 1630
+Gas: 140
+Food: 350 
+Pet: 50
+Car: 380 

@@ -3,6 +3,6 @@
 
 
 void render_visualizer(); 
-void action_input(); 
+int action_input(); 
 
 #endif

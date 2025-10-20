@@ -1,13 +1,23 @@
+// Get 
+
 // import, includes, etc
 #include <iostream> 
 #include "../includes/timer.h"
+#include "../includes/main.h" 
 #include <map> 
 #include <string> 
 #include <fstream> 
+#include <cstdlib>
+#include <vector>
+
+
 
 std::map<std::string, int> dopaminergic_actions = {
     {"weed", 50}, {"scrolling", 25}, {"clash", 30} 
 }; 
+
+std::vector<int> count(22, 0);  
+
 
 void render_visualizer(){
     std::cout << "Debug: render_visualizer()\n"; 
@@ -34,8 +44,9 @@ void erase_content(){
 }
 
 void update_visualizer(int y){ 
-    std::cout << "Debug: update_visualizer()\n"; 
+    std::cout << "Debug: update_visualizer()\n";   
 
+    // count for visualizer
     std::map<int, std::string> visualizer_map = {
         {0, "    DRV                                            \n"}, 
         {1, " 100 ╻                                             \n"}, 
@@ -76,6 +87,7 @@ void update_visualizer(int y){
 
     // 43 white spaces 
 
+
     // RENDER  
     std::cout << "\n"; // initial spacing; 
 
@@ -106,9 +118,9 @@ int dopamine_level(int level){
         std::cout << "Debug: dopamine_level.txt is open"; 
         std::getline(r, line); 
         std:: cout << line; 
-        if(std::stoi(line) != 0){
-            level += std::stoi(line); 
-        }
+        // if(std::stoi(line) != 0){
+        //     level += std::stoi(line); 
+        // }
 
         if(level > 100){
             level = 100; 
@@ -155,21 +167,6 @@ int action_input(){
 
     return 0; 
 }
-
-
-
-
-// void plot(int x, int y){
-//     int plot[] = {}; 
-
-//     //translate time to post
-//     int x = get_time() * 2; 
-//     int y;    
-
-//     int eq = 100 - (1 * y);
-//     if 
-
-// }
 
 
 // types of dopamine, Short form content, masturbation, weed, tobacco, food, Sex, etc...

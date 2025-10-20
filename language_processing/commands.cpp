@@ -5,6 +5,7 @@
 #include <optional> 
 #include <cstdlib> // for system
 
+#include "../includes/budget.h"  
 #include "../includes/commands.h"
 #include "../includes/main.h"
 #include "../includes/checklist.h"
@@ -25,6 +26,7 @@ Checklist cl;
 
 // create 'cr' function 
 void create(std::string type){
+    std::cout << "Debug: create()"; 
     // std::cout << "Creating..." << type; // debug test
 
     // creation types
@@ -34,12 +36,18 @@ void create(std::string type){
         cl.create_checklist(); 
     }
     if(type == "dopamine"){
+        clear_console(); 
         action_input(); 
     }       
+
+    if(type == "budget"){
+        accounts(); 
+    }
 
 }
 
 Parsed_Cmd check_for_command(std::string c){
+    std::cout << "Debug: check_for_command()"; 
     std::string cmd; 
     std::string type; 
     // std::string cmds[] = {"cr", "op", "rm"}; 
@@ -81,6 +89,7 @@ void command(std::string c){
     //parse the string for the command and the type
     
     //parse the string and pass the command to checkForCommands()
+    std::cout << "Debug: command()";  
     check_for_command(c); 
     
 

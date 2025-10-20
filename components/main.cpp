@@ -4,7 +4,10 @@
 #include "../includes/main.h"
 #include "../includes/main.h"
 #include "../includes/timer.h" 
+#include "../includes/horus.h" 
 #include <cstdlib> // for system
+#include <chrono>
+#include <thread> 
 
 //Program intro
 
@@ -17,10 +20,12 @@ void intro() {
     std::cout << "└─────────────────────────┘\n\n";
     std::cout << "\033[1;36m"; // cyan
     std::cout << ">> Welcome back, Rahsaan...\n";
-    std::cout << ">> System ready.\n\n";
+    std::cout << ">> My system is ready.\n\n";
     std::cout << "\033[0;34m"; // dim blue
-    std::cout << "[->] Enter command: ";
+    std::cout << "[->] How can I help you today? ";
     std::cout << "\033[0m"; // reset color
+
+    
 }
 
 int main(){ 
@@ -29,6 +34,7 @@ int main(){
     std::getline(std::cin, c); 
 
     command(c); 
+    // horus(c); 
 } 
 
 
